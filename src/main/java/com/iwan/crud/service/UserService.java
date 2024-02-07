@@ -21,8 +21,8 @@ public class UserService {
         return userRepository.findById(userid).orElse(null);
     }
 
-    public User saveUser(User user) {
-        return userRepository.save(user);
+    public List<User> saveUsers(List<User> users) {
+        return userRepository.saveAll(users);
     }
 
     public void deleteUser(Long userid) {

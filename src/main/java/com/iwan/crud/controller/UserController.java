@@ -34,9 +34,9 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<User> saveUser(@RequestBody User user) {
-        User savedUser = userService.saveUser(user);
-        return ResponseEntity.ok(savedUser);
+    public ResponseEntity<List<User>> saveUsers(@RequestBody List<User> users) {
+        List<User> savedUsers = userService.saveUsers(users);
+        return ResponseEntity.ok(savedUsers);
     }
 
     @DeleteMapping("/delete/{userid}")
